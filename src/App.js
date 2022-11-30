@@ -3,7 +3,12 @@ import { data } from './data'
 
 function DynamicComponent(props) {
   const Element = props.element;
-  return <Element {...props.data} />;
+  return (
+  <Element {...props.data}>
+    {props.data.text}
+  </Element>
+  )
+
 }
 
 function App() {
