@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
 
 export default styled.div.attrs({
-  className: 'component',
+  className: 'Header',
 })`
   ${(props) => {
+    const { style } = props;
     return css
   }};
 `;

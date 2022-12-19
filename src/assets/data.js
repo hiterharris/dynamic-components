@@ -1,8 +1,5 @@
-import Header from '../components/Header';
-import Paragraph from '../components/Paragraph';
-import Image from '../components/Image/Image';
+import { Header, Paragraph, Image } from '../components';
 import Button from '@mui/material/Button';
-import TestComponent from '../components/TestComponent/TestComponent'
 
 export const siteData = {
     siteId: 1,
@@ -14,27 +11,16 @@ export const siteData = {
     },
     pageBody: {
         style: {
+            width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            alignItem: 'center',
+            alignItems: 'center',
             backgroundColor: 'black',
             color: 'white',
             overflow: 'hidden',
         }
     },
     blocks: [
-        {
-            id: 0,
-            order: 0,
-            type: "component",
-            element: TestComponent,
-            data: {
-                text: "TestComponent",
-            },
-            style: {
-                color: 'blue'
-            }
-        },
         {
             id: 1,
             order: 1,
@@ -44,7 +30,9 @@ export const siteData = {
                 text: "Hello world",
                 level: 2,
             },
-            style: {}
+            style: {
+                color: 'blue'
+            }
         },
         {
             id: 2,
@@ -54,7 +42,9 @@ export const siteData = {
             data: {
                 text: 'Paragraph'
             },
-            style: {}
+            style: {
+                color: 'red'
+            }
         },
         {
             id: 3,
@@ -62,10 +52,12 @@ export const siteData = {
             order: 3,
             element: Button,
             data: {
-                text: 'Button',
+                text: 'Click Me!',
                 variant: 'contained'
             },
-            style: {}
+            style: {
+                backgroundColor: 'green'
+            }
         },
         {
             id: 4,
@@ -76,7 +68,11 @@ export const siteData = {
                 url: "https://s.yimg.com/cv/apiv2/default/nfl/20190724/500x500/2019_GB_wbg.png",
                 alt: "Packets logo",
             },
-            style: {}
+            style: {
+                img: {
+                    width: 200,
+                }
+            }
         },
     ],
   };

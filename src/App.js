@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './App.css';
 import { siteData } from './assets/data'
-import TestComponent from './components/TestComponent/TestComponent'
 import AppStyled from './AppStyled'
 
 function DynamicComponent(props) {
