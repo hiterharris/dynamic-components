@@ -1,23 +1,25 @@
+import React, { Fragment } from 'react'
 import './App.css';
-import { data } from './data'
+import { siteData } from './assets/data'
+import TestComponent from './components/TestComponent/TestComponent'
+import AppStyled from './AppStyled'
 
 function DynamicComponent(props) {
   const Element = props.element;
   return (
-  <Element {...props.data}>
+  <Element {...props?.data} style={props?.style} src={props?.data?.url}>
     {props.data.text}
   </Element>
   )
-
 }
 
 function App() {
   return (
-    <div className="App">
-      {data.map((item, index) => {
-        return <DynamicComponent key={index} {...item} />   
-      })}
-    </div>
+    <AppStyled style={siteData?.pageBody?.style}>
+        {siteData?.blocks?.map((item, index) => {
+          return <DynamicComponent key={index} {...item} />   
+        })}
+    </AppStyled>
   );
 }
 
