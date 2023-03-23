@@ -1,23 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css';
 import { siteData } from './assets/data'
 import AppStyled from './AppStyled'
-
-function DynamicComponent(props) {
-  const Element = props.element;
-  return (
-  <Element {...props?.data} style={props?.style} src={props?.data?.url}>
-    {props.data.text}
-  </Element>
-  )
-}
+import { DynamicComponent } from './components';
+import { Header, Toolbar } from './components';
 
 function App() {
+  const [blocks, setBlocks] = useState(siteData.blocks);
   return (
     <AppStyled style={siteData?.pageBody?.style}>
-        {siteData?.blocks?.map((item, index) => {
+        {blocks?.map((item, index) => {
           return <DynamicComponent key={index} {...item} />   
         })}
+        <Toolbar siteData={siteData} blocks={blocks} setBlocks={setBlocks} />
     </AppStyled>
   );
 }

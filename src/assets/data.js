@@ -36,8 +36,8 @@ export const siteData = {
         },
         {
             id: 2,
-            type: 'paragraph',
             order: 2,
+            type: 'paragraph',
             element: Paragraph,
             data: {
                 text: 'Paragraph'
@@ -48,8 +48,8 @@ export const siteData = {
         },
         {
             id: 3,
-            type: 'button',
             order: 3,
+            type: 'button',
             element: Button,
             data: {
                 text: 'Click Me!',
@@ -61,8 +61,8 @@ export const siteData = {
         },
         {
             id: 4,
-            type: "image",
             order: 4,
+            type: "image",
             element: Image,
             data: {
                 url: "https://s.yimg.com/cv/apiv2/default/nfl/20190724/500x500/2019_GB_wbg.png",
